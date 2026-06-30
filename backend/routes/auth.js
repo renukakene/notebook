@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const user = require('../models/User');
+const User = require('../models/User');
 
-router.get('/' , (req , res) =>{
+router.post('/' , async (req , res) =>{
 
  console.log(req.body);
  const user = User(req.body);
- user.save()  
+ await user.save()  
 
 
  res.send("hello")

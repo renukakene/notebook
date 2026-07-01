@@ -1,5 +1,6 @@
 const connectToMongo = require('./db');
 const express = require('express');
+require('dotenv').config({ path: '.env.local' });
 connectToMongo();
 
 

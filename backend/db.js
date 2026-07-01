@@ -10,6 +10,6 @@ const connectToMongo = async () => {
         console.log("Connection failed");
         console.error(error);
     }
-};
+}
 
 module.exports = connectToMongo;

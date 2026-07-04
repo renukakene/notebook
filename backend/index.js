@@ -1,6 +1,7 @@
 const connectToMongo = require('./db');
 const express = require('express');
-require('dotenv').config({ path: '.env.local' });
+require('dotenv').config();
+console.log("JWT_SECRET:", process.env.JWT_SECRET);
 connectToMongo();
 
 
@@ -14,5 +15,5 @@ app.use('/api/notes' , require('./routes/notes'))
 
 
 app.listen(port, () => {
-  console.log(`Example app listening on port http://localhost:${port}`)
+  console.log(`Notebook backend listening on port http://localhost:${port}`)
 })
